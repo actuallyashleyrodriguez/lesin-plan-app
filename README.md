@@ -1,3 +1,3 @@
 LeSin Plan is a Sinatra Based app that allows instructors to upload various lesson plans and share with other teachers. With virtual learning, it's important now more than ever to have creative lesson plans that allow children to not only receive the same quality education at home, but also to encourage social interactions with their peers as well for cognitive and emotional benefits. 
 
-Although it's difficult living in the midst of a pandemic, LeSin Plan aims to provide ways for teachers to give a bit of normalcy to their students, regardless of age. 
+Although it's difficult living in the midst of a pandemic, LeSin Plan aims to provide ways for teachers to give a bit of normalcy to their students, regardless of age.    

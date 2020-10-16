@@ -5,6 +5,7 @@ class Lessons < ActiveRecord::Migration
       t.string :subject
       t.text :description
       t.string :image_url
+      t.integer :user_id
     end
   end
 end

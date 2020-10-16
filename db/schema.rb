@@ -14,10 +14,11 @@
 ActiveRecord::Schema.define(version: 20201013234639) do
 
   create_table "lessons", force: :cascade do |t|
-    t.string "grade"
-    t.string "subject"
-    t.text   "description"
-    t.string "image_url"
+    t.string  "grade"
+    t.string  "subject"
+    t.text    "description"
+    t.string  "image_url"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
