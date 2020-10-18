@@ -1,16 +1,32 @@
-<html>
-<head>
-<title>LeSin Plan</title>
-</head>
-<body>
-<h1>Welcome to LeSin plan</h1>
-<br><br>
-<p>LeSin Plan helps teachers and school staff easily transition their students to virtual learning without hindering the social aspect of school. Simply upload the lesson plan that has worked for you and your students, share the description of the class and plan, and that's it! Don't have a plan that works yet? No problem, feel free to browse other teacher's plans!</p>
-<br>
-<p>LeSin Plan also offers resources for School psychologist, Social workers, principals, etc. What are you waiting for? Sign up today!</p>
-<footer>
-<p> 2020 LeSin Plan</p>
-<p>Made to ensure ALL kids maintain a proper education, despite circumstances</p>
-</footer>
-</body>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <title>LesinPlanApp</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+
+        <%= yield %>
+
+      <footer class="branding">
+        <small>&copy; 2020 <strong>LesinPlanApp</strong></small>
+      </footer>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!--[if lt IE 7]>
+      <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+      <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+  </body>
 </html>
