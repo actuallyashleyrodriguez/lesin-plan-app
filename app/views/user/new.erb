@@ -5,5 +5,15 @@
 <body>
 <h1>Create a New LeSin Plan Account!</h1>
 <h2>Ready to start giving your students an in-person experience while remaining virtual? Sign up below!</h2>
+
+<form method="post" action="/signup">
+<label for="user_name">Full Name:</label>
+<input type="text" id="user_name" name="user[name]"></input><br>
+<label for="user_email">Email Address:</label>
+<input type="email" id="user_email" name="user[email]"></input><br>
+<label for="user_password">Password:</label>
+<input type="password" id="user_password" name="user[password]"></input><br>
+<input type="submit" value="Create your account!">
+</form>
 </body>
 </html>
