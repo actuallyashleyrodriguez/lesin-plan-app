@@ -9,7 +9,9 @@ class UsersController < ApplicationController
 
     post '/signup' do
         @user = User.create(params["user"])
-        redirect to "/login"
+
+        session[:user_id] = @user.id
+        redirect to "/users/#{@user.id}"
     end
 
     post '/login' do
@@ -23,7 +25,12 @@ class UsersController < ApplicationController
     end
 
     get '/users/:id' do
-        @user = find_by_id(params[:id])
-        
+        @user = User.find_by_id(params[:id])
+        erb :"/user/show"
+    end
+
+    get '/logout' do
+        session.clear
+        redirect to "/"
     end
 end
