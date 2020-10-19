@@ -7,6 +7,18 @@
 <br>
 <h3>View your Lesson Plans<h3>
 
+<ol>
+<%  @lesson.all.each do |l|  %>
+    <li><img src="<%=l.image_url %>" alt="alternatetext">
+        <ul>
+        <li><%=l.description %></li>
+        <li><%=l.grade %></li>
+        <li><%= l.subject %></li>
+        </ul>
+    </li>
+    <%end%>
+</ol>
+
 <a href="/logout">Logout</a>
 </body>
 </hmtl>
