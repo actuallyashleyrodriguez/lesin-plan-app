@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Lessons</title>
+</head>
+<body>
+<h1>All Lessons </h1>
+<ol>
+<%  @lesson.each do |l|  %>
+    <li><img src="<%=l.image_url %>" alt="alternatetext">
+        <ul>
+        <li><%=l.description %></li>
+        <li><%=l.grade %></li>
+        <li><%= l.subject %></li>
+        </ul>
+    </li>
+    <br><br>
+    <%end%>
+</ol>
+</body>
+</html>
