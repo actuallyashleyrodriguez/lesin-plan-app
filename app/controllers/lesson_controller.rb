@@ -11,6 +11,8 @@ class LessonController < ApplicationController
     end
 
     #update
+    get  '/lessons/:id' do
+    end
 
     #delete
 end

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20201013234639) do
 
   create_table "lessons", force: :cascade do |t|
     t.string  "grade"
+    t.string  "label"
     t.string  "subject"
     t.text    "description"
     t.string  "image_url"
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 20201013234639) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "name"
+    t.string "state"
     t.string "password_digest"
   end
 
