@@ -7,8 +7,9 @@ class UsersController < ApplicationController
         erb :"/user/login"
     end
 
-    post '/signup' do
+    post '/signup' do #bad date needs to be insterted
         @user = User.create(params["user"])
+        binding.pry
 
         session[:user_id] = @user.id
         redirect to "/users/#{@user.id}"
@@ -20,8 +21,8 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect to "/users/#{@user.id}"
         else
-            redirect  to "/login"
             flash[:error] = "Incorrect username or password."
+            redirect  to "/login" 
         end
     end
 

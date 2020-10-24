@@ -7,11 +7,14 @@ class LessonController < ApplicationController
     end
 
     post '/lessons' do
-        @lesson = Lesson.create(params["lesson"])
+        @lesson = Lesson.new(params["lesson"])
         @lesson.user = current_user
-        @lesson.save
-
+        if @lesson.save
         redirect to "/lessons/#{@lesson.id}"
+        else
+            flash[:error] = "Please fill in all items."
+            redirect to "/lessons/new"
+        end
     end
 
     #read
@@ -31,7 +34,7 @@ class LessonController < ApplicationController
 
     #update
 
-    get '/lessons/:id/edit' do
+    get '/lessons/:id/edit' do #validation for bad data
         @lesson = Lesson.find_by_id(params[:id])
 
         erb :"/lesson/edit"
@@ -46,7 +49,7 @@ class LessonController < ApplicationController
 
     #delete
 
-    delete '/lessons/:id' do 
+    delete '/lessons/:id' do #validation for Bad data to be inserted
         @lesson = Lesson.find_by_id(params[:id])
         @lesson.destroy
 

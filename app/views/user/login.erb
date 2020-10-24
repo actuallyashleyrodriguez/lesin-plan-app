@@ -3,6 +3,9 @@
 <title>LeSin Plan Login</title>
 <head>
 <body>
+<% if flash[:error] %>
+<h5 style="color:red;"> <%= flash[:error]%></h5>
+<%end%>
 <h1>Login to your LeSin Plan Account!</h1>
 <form method="post" action="/login">
 <label for="email">Email</label>

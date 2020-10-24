@@ -3,6 +3,9 @@
 <title>New Lesson</title>
 </head>
 <body>
+<% if flash[:error] %>
+<h5 style="color:red;"> <%= flash[:error]%></h5>
+<%end%>
 <h1>Create a New Lesson Plan</h1>
 
 <form method="post" action="/lessons">
