@@ -16,6 +16,15 @@
   <body>
     <div class="wrapper">
 
+    <div class="nav">
+      <% if logged_in? %>
+        <a href="/users/<%=current_user.id%>">Home</a>
+        <a href="/lessons">All Lessons</a>
+        <a href="/">New Lesson</a>
+        <a href="/logout">Logout</a>
+        <% end %>
+        </div>
+
         <%= yield %>
 
       <footer class="branding">

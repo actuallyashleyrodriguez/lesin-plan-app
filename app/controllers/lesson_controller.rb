@@ -9,10 +9,12 @@ class LessonController < ApplicationController
 
         erb  :"/lesson/index"
     end
-
-    #update
+    
     get  '/lessons/:id' do
     end
+
+    #update
+    
 
     #delete
 end
