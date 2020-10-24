@@ -30,7 +30,26 @@ class LessonController < ApplicationController
     end
 
     #update
+
+    get '/lessons/:id/edit' do
+        @lesson = Lesson.find_by_id(params[:id])
+
+        erb :"/lesson/edit"
+    end
     
+    patch '/lessons/:id' do
+        @lesson = Lesson.find_by_id(params[:id])
+        @lesson.update(params["lesson"])  
+
+        redirect to "/lessons/#{@lesson.id}"
+    end
 
     #delete
+
+    delete '/lessons/:id' do 
+        @lesson = Lesson.find_by_id(params[:id])
+        @lesson.destroy
+
+        redirect to "/lessons"
+    end
 end

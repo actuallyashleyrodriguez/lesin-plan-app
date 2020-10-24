@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Edit Lesson</title>
+</head>
+<body>
+<h1>Edit your Lesson Plan</h1>
+
+<form class="" method="post" action="/lessons/<%= @lesson.id%>">
+<input type="hidden" name="_method" value="patch">
+<label for="lesson_label">Lesson label:</label>
+<input type="text" id="lesson_label" name="lesson[label]" value="<%=@lesson.label%>"></input><br>
+<label for="lesson_description">Lesson Description:</label>
+<input type="text" id="lesson_description" name="lesson[description]" value="<%=@lesson.description%>"></input><br>
+<label for="lesson_subject">Subject:</label>
+<input type="text" id="lesson_subject" name="lesson[subject]" value="<%=@lesson.subject%>"></input><br>
+<label for="lesson_grade">Grade:</label>
+<input type="text" id="lesson_grade" name="lesson[grade]" value="<%=@lesson.grade%>"></input><br>
+<label for="lesson_image_url">Image URL:</label>
+<input type="text" id="lesson_image_url" name="lesson[image_url]" value="<%=@lesson.image_url%>"></input><br>
+<input type="submit" value="Update your lesson!">
+</form>
+</body>
+</html>
