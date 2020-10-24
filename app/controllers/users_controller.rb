@@ -21,6 +21,7 @@ class UsersController < ApplicationController
             redirect to "/users/#{@user.id}"
         else
             redirect  to "/login"
+            flash[:error] = "Incorrect username or password."
         end
     end
 

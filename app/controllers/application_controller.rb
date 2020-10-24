@@ -7,9 +7,10 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :session_secret, "sinatra_lesson_plans"
+    register Sinatra::Flash
   end
 
-  get "/" do
+  get "/" do #if user is logged in automatically go to their homepage
     if logged_in?
       redirect to "/users/#{current_user.id}"
     else
