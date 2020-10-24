@@ -2,6 +2,18 @@ class LessonController < ApplicationController
 
     #create
 
+    get '/lessons/new' do
+        erb :"/lesson/new"
+    end
+
+    post '/lessons' do
+        @lesson = Lesson.create(params["lesson"])
+        @lesson.user = current_user
+        @lesson.save
+
+        redirect to "/lessons/#{@lesson.id}"
+    end
+
     #read
 
     get '/lessons' do
