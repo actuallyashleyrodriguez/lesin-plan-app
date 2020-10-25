@@ -3,6 +3,9 @@
 <title>LeSin Plan</title>
 </head>
 <body>
+<% if flash[:error] %>
+<h5 style="color:red;"> <%= flash[:error]%></h5>
+<%end%>
 <h1>Welcome to LeSin plan</h1>
 <br><br>
 <p>LeSin Plan helps teachers and school staff easily transition their students to virtual learning without hindering the social aspect of school. Simply upload the lesson plan that has worked for you and your students, share the description of the class and plan, and that's it! Don't have a plan that works yet? No problem, feel free to browse other teacher's plans!</p>

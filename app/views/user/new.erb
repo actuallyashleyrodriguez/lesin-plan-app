@@ -3,6 +3,9 @@
 <title>LeSin Plan Signup</title>
 </head>
 <body>
+<% if flash[:error] %>
+<h5 style="color:red;"> <%= flash[:error]%></h5>
+<%end%>
 <h1>Create a New LeSin Plan Account!</h1>
 <h2>Ready to start giving your students an in-person experience while remaining virtual? Sign up below!</h2>
 

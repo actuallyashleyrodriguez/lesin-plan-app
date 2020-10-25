@@ -3,6 +3,9 @@
 <title> View Lesson </title>
 </head>
 <body>
+<% if flash[:error] %>
+<h5 style="color:red;"> <%= flash[:error]%></h5>
+<%end%>
 <h1><%=@lesson.label %></h1>
 <br>
 <h3>Posted by: <a href="/users/<%=@user.id%>"><%= @user.name %></a></h3>
@@ -15,7 +18,7 @@
         <li><%= @lesson.subject %></li>
         </ul>
         <br><br>
-<p><a href="/lessons/<%=@lesson.id%>/edit">Edit</a> your post</p>
+<p><a href="/lessons/<%=@lesson.id%>/edit">Edit</a> this lesson</p>
 
 <form action="/lessons/<%=@lesson.id%>" method="post">
     <input type="hidden" name="_method" value="delete">

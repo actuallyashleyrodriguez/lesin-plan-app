@@ -3,7 +3,12 @@ class LessonController < ApplicationController
     #create
 
     get '/lessons/new' do
-        erb :"/lesson/new"
+        if logged_in? 
+            erb :"/lesson/new"
+        else
+            flash[:error] = "Please login or sign-up to create a post"
+            redirect to "/"
+        end
     end
 
     post '/lessons' do
@@ -36,8 +41,12 @@ class LessonController < ApplicationController
 
     get '/lessons/:id/edit' do #validation for bad data
         @lesson = Lesson.find_by_id(params[:id])
-
-        erb :"/lesson/edit"
+        if @lesson.user == current_user
+            erb :"/lesson/edit"
+        else
+            flash[:error] = "You cannot edit this lesson"
+            redirect to "/lessons/#{@lesson.id}"
+        end
     end
     
     patch '/lessons/:id' do
