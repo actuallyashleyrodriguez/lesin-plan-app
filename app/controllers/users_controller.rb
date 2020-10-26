@@ -8,14 +8,14 @@ class UsersController < ApplicationController
     end
 
     post '/signup' do #bad date needs to be insterted
-        @user = User.create(params["user"])
-        #if @user.save
+        @user = User.new(params["user"])
+        if @user.save
             session[:user_id] = @user.id
             redirect to "/users/#{@user.id}"
-       # else
-            #flash[:error] = "Please fill in all items."
-            #redirect to "/users/signup"
-        #end
+        else
+            flash[:error] = "Please fill in all items."
+            redirect to "/signup"
+        end
     end
 
     post '/login' do

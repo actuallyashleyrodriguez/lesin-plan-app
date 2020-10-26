@@ -3,6 +3,6 @@ class User < ActiveRecord::Base
 
     has_many :lessons
 
-    validates :email, :name, :state, presence: true
-    
+    validates :name, :state, presence: true
+    validates :email, uniqueness: true
 end
