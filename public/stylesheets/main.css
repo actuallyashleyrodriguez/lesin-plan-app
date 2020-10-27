@@ -30,9 +30,10 @@
   }
 
   h1 {
-    font: Chalkduster, fantasy;
+    font-family: 'Chalkduster', fantasy;
     font-size: 36px;
     line-height: 54px;
+    margin-top: 18px;
   }
 
   h2 {
@@ -48,13 +49,31 @@
   }
 
   p {
-    font: Arial, Helvetica, sans-serif
+    font: Arial, Helvetica, sans-serif;
     margin-bottom: 18px;
   }
+
+  
 
   .main {
     overflow: hidden;
   }
+
+  .nav a{
+    margin: 8px;
+    font-weight: bold;
+    padding-bottom: 58px;
+    font-size: 18px;
+  }
+  li img {
+    width: 200px;
+    height: 300px;
+}
+
+p img {
+  width: 613px;
+  height: 802px;
+}
 
   .content {
     float: left;
@@ -104,10 +123,6 @@
     padding: 0;
   }
 
-  h1 {
-    font-size: 24px;
-    line-height: 36px;
-  }
 
   h2 {
     font-size: 18px;
