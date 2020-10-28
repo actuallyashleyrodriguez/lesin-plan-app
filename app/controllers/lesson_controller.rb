@@ -39,7 +39,7 @@ class LessonController < ApplicationController
 
     #update
 
-    get '/lessons/:id/edit' do #validation for bad data
+    get '/lessons/:id/edit' do 
         @lesson = Lesson.find_by_id(params[:id])
         if @lesson.user == current_user
             erb :"/lesson/edit"
@@ -58,7 +58,7 @@ class LessonController < ApplicationController
 
     #delete
 
-    delete '/lessons/:id' do #validation for Bad data to be inserted
+    delete '/lessons/:id' do 
         @lesson = Lesson.find_by_id(params[:id])
         @lesson.destroy
 
